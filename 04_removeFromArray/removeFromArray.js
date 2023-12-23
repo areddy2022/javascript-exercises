@@ -1,9 +1,17 @@
-const removeFromArray = function(arr, arg1) {
-    ansArr = [];
+const removeFromArray = function(arr, ...args) {
+    let ansArr = [];
+    let indexNotContains;
     for(index in arr){
-        if(arr[index] !== arg1){
-            ansArr.push(arr[index]);
+        for (argindex in args){
+            if(arr[index] !== args[argindex]){
+                indexNotContains = true;
+            }
+            else{
+                indexNotContains = false;
+                break;
+            }
         }
+        indexNotContains ? ansArr.push(arr[index]) : ansArr;
     }
     return ansArr;
 };
