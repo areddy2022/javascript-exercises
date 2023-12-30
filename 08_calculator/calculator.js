@@ -35,8 +35,6 @@ const factorial = function(num1) {
   return product;
 };
 
-console.log(4,3);
-
 // Do not edit below this line
 module.exports = {
   add,
